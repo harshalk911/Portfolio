@@ -28,6 +28,7 @@ with col3:
         st.write(row["description"])
         st.image("images/" + row["image"])
         st.write(f"[Source Code]({row['url']})")
+        st.write(f"[Go to App]({row['app']})")
 
 with col4:
     for index, row in data[10:].iterrows():
@@ -35,3 +36,4 @@ with col4:
         st.write(row["description"])
         st.image("images/" + row["image"])
         st.write(f"[Source Code]({row['url']})")
+        st.write(f"[Go to App]({row['app']})")
