@@ -9,14 +9,32 @@ with col1:
     st.image("images/photo.png")
 
 with col2:
-    st.title("Harshal Korade")
+    st.markdown(
+        """
+        <style>
+        .fancy-header {
+            color: #e91e63;
+            font-size: 64px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px #000000;
+        }
+        </style>
+        <div class='fancy-header'>Harshal Korade</div>
+        """,
+        unsafe_allow_html=True
+    )
+
     content = """Hi! I'm a passionate Python developer with a strong focus on building clean, 
     scalable, and efficient web applications. I specialize in backend development, integrating 
     databases, and crafting dynamic user experiences with modern tools and frameworks.
     """
     st.info(content)
 
-st.subheader("Below you can find some apps I have built in Python. Feel free to contact me.")
+st.markdown(
+    f"<h1 style= 'color: #1f77b4';>Below you can find some apps I have built in Python."
+    f" Feel free to contact me.</h1>",
+    unsafe_allow_html=True
+)
 
 col3 , empty_col, col4 = st.columns([1.5,0.5,1.5])
 
